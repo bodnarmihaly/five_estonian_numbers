@@ -35,7 +35,7 @@ def eval_3(in_3):
         elif str_in[1] == '0' and str_in[2] == '0':
             return [one[str_in[0]] + "sada"]
         elif str_in[0] == '1':
-            return ["sada " + eval_2(str_in[1] + str_in[2])[0]]
+            return ["sada " + eval_2(str_in[1] + str_in[2])[0], "ükssada " + eval_2(str_in[1] + str_in[2])[0]]
         else:
             return [one[str_in[0]] + "sada " + eval_2(str_in[1] + str_in[2])[0]]
 
