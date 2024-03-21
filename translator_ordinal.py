@@ -62,9 +62,9 @@ def evaluator(integer):
         if str_in == '1000':
             return 'tuhandes'
         elif str_in[1] == '0' and str_in[2] == '0' and str_in[3] == '0':
-            return one_omastav[str_in[0]] + "tuhandes"
+            return one_omastav[str_in[0]] + " tuhandes"
         elif str_in[0] == '1':
             return "tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])
         else:
-            return one_omastav[str_in[0]] + "tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])
+            return one_omastav[str_in[0]] + " tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])
           
