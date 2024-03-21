@@ -25,46 +25,46 @@ one_omastav = {
 
 def eval_2(in_2):
     if in_2 == '10':
-        return "kümnes"
+        return ["kümnes"]
     elif in_2[0] == '1':
-        return one_omastav[in_2[1]] + "teistkümnes"
+        return [one_omastav[in_2[1]] + "teistkümnes"]
     elif in_2[0] == '0':
-        return one[in_2[1]]
+        return [one[in_2[1]]]
     elif in_2[1] == '0':
-        return one_omastav[in_2[0]] + "kümnes"
+        return [one_omastav[in_2[0]] + "kümnes"]
     else:
-        return one_omastav[in_2[0]] + "kümne " + one[in_2[1]]
+        return [one_omastav[in_2[0]] + "kümne " + one[in_2[1]]]
     
 
 def eval_3(in_3):
     str_in = str(in_3)
     if len(str_in) == 2:
-        return eval_2(str_in)
+        return [eval_2(str_in)]
     elif len(str_in) == 3:
         if str_in == '100':
-            return "sajas"
+            return ["sajas"]
         elif str_in[0] == '0':
-            return eval_2(str_in[1] + str_in[2])
+            return [eval_2(str_in[1] + str_in[2])]
         elif str_in[1] == '0' and str_in[2] == '0':
-            return one_omastav[str_in[0]] + "sajas"
+            return [one_omastav[str_in[0]] + "sajas"]
         elif str_in[0] == '1':
-            return "saja " + eval_2(str_in[1] + str_in[2])
+            return ["saja " + eval_2(str_in[1] + str_in[2])]
         else:
-            return one_omastav[str_in[0]] + "saja " + eval_2(str_in[1] + str_in[2])
+            return [one_omastav[str_in[0]] + "saja " + eval_2(str_in[1] + str_in[2])]
 
 def evaluator(integer):
     str_in = str(integer)
     if len(str_in) == 1:
-        return one[str_in]
+        return [one[str_in]]
     elif len(str_in) <= 3:
-        return eval_3(str_in)
+        return [eval_3(str_in)]
     elif len(str_in) == 4:
         if str_in == '1000':
-            return 'tuhandes'
+            return ['tuhandes']
         elif str_in[1] == '0' and str_in[2] == '0' and str_in[3] == '0':
-            return one_omastav[str_in[0]] + " tuhandes"
+            return [one_omastav[str_in[0]] + " tuhandes"]
         elif str_in[0] == '1':
-            return "tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])
+            return ["tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])]
         else:
-            return one_omastav[str_in[0]] + " tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])
+            return [one_omastav[str_in[0]] + " tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])]
           

@@ -17,6 +17,7 @@ MODE_3 = 'cardinal + ordinal, randomly mixed'
 MODE_4 = 'ordinal adessive (e.g. "on the sixth")'
 
 st.title('Viis numbrit   :flag-ee:')
+st.write("***under development***")
 
 # Initialize session state if not already done
 if 'first_run' not in st.session_state:
@@ -112,30 +113,30 @@ if '0' in st.session_state and st.session_state['form_submitted']:
 
         answer_i = st.session_state[i].strip().lower()
 
-        if answer_i == correct_i:
+        if answer_i in correct_i:
             correct_cnt += 1
             if mode == MODE_1:
-                st.markdown(f"{num_i}  {correct_i} ✅")
+                st.markdown(f"{num_i}  {correct_i[0]} ✅")
             elif mode == MODE_2:
-                st.markdown(f"*{num_i}.  {correct_i}* ✅")
+                st.markdown(f"*{num_i}.  {correct_i[0]}* ✅")
             elif mode == MODE_4:
-                st.markdown(f"*{num_i}. (...korrusel/kohal/etc.)  {correct_i}* ✅")
+                st.markdown(f"*{num_i}. (...korrusel/kohal/etc.)  {correct_i[0]}* ✅")
             elif st.session_state['mix_pattern'][i] == 0:
-                st.markdown(f"{num_i}  {correct_i} ✅")
+                st.markdown(f"{num_i}  {correct_i[0]} ✅")
             else:
-                st.markdown(f"*{num_i}.  {correct_i}* ✅")
+                st.markdown(f"*{num_i}.  {correct_i[0]}* ✅")
 
         else:
             if mode == MODE_1:
-                st.markdown(f"{num_i}  ~~{answer_i}~~ ❌ Correct: {correct_i}")
+                st.markdown(f"{num_i}  ~~{answer_i}~~ ❌ Correct: {correct_i[0]}")
             elif mode == MODE_2:
-                st.markdown(f"*{num_i}.  ~~{answer_i}~~ ❌ Correct: {correct_i}*")
+                st.markdown(f"*{num_i}.  ~~{answer_i}~~ ❌ Correct: {correct_i[0]}*")
             elif mode == MODE_4:
-                st.markdown(f"*{num_i}. (...korrusel/kohal/etc.)  ~~{answer_i}~~ ❌ Correct: {correct_i}*")
+                st.markdown(f"*{num_i}. (...korrusel/kohal/etc.)  ~~{answer_i}~~ ❌ Correct: {correct_i[0]}*")
             elif st.session_state['mix_pattern'][i] == 0:
-                st.markdown(f"{num_i}  ~~{answer_i}~~ ❌ Correct: {correct_i}")
+                st.markdown(f"{num_i}  ~~{answer_i}~~ ❌ Correct: {correct_i[0]}")
             else:
-                st.markdown(f"*{num_i}.  ~~{answer_i}~~ ❌ Correct: {correct_i}*")
+                st.markdown(f"*{num_i}.  ~~{answer_i}~~ ❌ Correct: {correct_i[0]}*")
 
     st.write("")
     if correct_cnt == 1:
