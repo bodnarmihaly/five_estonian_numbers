@@ -66,5 +66,5 @@ def evaluator(integer):
         elif str_in[0] == '1':
             return ["tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])[0]]
         else:
-            return [one_omastav[str_in[0]] + " tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])][0]
+            return [one_omastav[str_in[0]] + " tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])[0]]
           
