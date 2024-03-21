@@ -48,9 +48,9 @@ def eval_3(in_3):
         elif str_in[1] == '0' and str_in[2] == '0':
             return [one_omastav[str_in[0]] + "sajandal"]
         elif str_in[0] == '1':
-            return ["saja " + eval_2(str_in[1] + str_in[2])]
+            return ["saja " + eval_2(str_in[1] + str_in[2])[0]]
         else:
-            return [one_omastav[str_in[0]] + "saja " + eval_2(str_in[1] + str_in[2])]
+            return [one_omastav[str_in[0]] + "saja " + eval_2(str_in[1] + str_in[2])[0]]
 
 def evaluator(integer):
     str_in = str(integer)
@@ -64,6 +64,6 @@ def evaluator(integer):
         elif str_in[1] == '0' and str_in[2] == '0' and str_in[3] == '0':
             return [one_omastav[str_in[0]] + " tuhandendal"]
         elif str_in[0] == '1':
-            return ["tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])]
+            return ["tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])[0]]
         else:
-            return [one_omastav[str_in[0]] + " tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])]
+            return [one_omastav[str_in[0]] + " tuhande " + eval_3(str_in[1] + str_in[2] + str_in[3])[0]]
